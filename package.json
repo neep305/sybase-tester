@@ -9,6 +9,7 @@
   "author": "Jason Nam",
   "license": "ISC",
   "dependencies": {
-    "sybase": "^1.2.1"
+    "sybase": "^1.2.1",
+    "sybase-wrapper": "^1.2.6"
   }
 }

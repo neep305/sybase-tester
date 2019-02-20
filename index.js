@@ -1,5 +1,5 @@
 var Sybase = require('sybase');
-var db = new Sybase('165.243.210.104',5638,'gshsdw','bs','bsuser');
+var db = new Sybase('165.243.210.104',5638,'gshsdw','lghs','gsshopdw007');
 
 db.connect((err) => {
     if (err) return console.log(err);
@@ -37,7 +37,7 @@ db.connect((err) => {
     )
     `;
 
-    db.query('select TOP 100 MD_ID from lghs.D_GOODS', (err, data) => {
+    db.query(query, (err, data) => {
         if (err) console.log(err);
 
         console.log(data);
