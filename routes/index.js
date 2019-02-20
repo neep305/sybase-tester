@@ -8,11 +8,8 @@ router.get('/result', async function(req, res, next) {
     console.log('req.params', req.params);
 
     const data = await db.getAllSrData(req.params);
-    console.log('data : ', data);
 
-    var result = new Object();
-    result.result = 'bad';
-    res.status(200).json(JSON.stringify(result));  
+    res.status(200).json(JSON.stringify(data));  
   } catch (error) {
     res.status(500).json()
   }
