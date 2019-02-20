@@ -37,7 +37,7 @@ db.connect((err) => {
     )
     `;
 
-    db.query('select TOP 100 MD_ID from lghs.D_GOODS', (err, data) => {
+    db.query(query, (err, data) => {
         if (err) console.log(err);
 
         console.log(data);
