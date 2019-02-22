@@ -6,6 +6,8 @@ db.connect((err) => {
 
     const query = `
     SELECT
+    D_SR.SR_REC_DATE,
+    D_SR.MEDIA,
     D_SR_TYPE_L.SR_NAME,
     D_SR_TYPE_M.SR_NAME,
     D_SR_TYPE_S.SR_NAME,
@@ -16,7 +18,8 @@ db.connect((err) => {
     D_ITEM.ITEM_CODE,
     D_ITEM.ITEM_NAME,
     D_GOODS_QUE.BROAD_DATE,
-    D_GOODS.MD_ID
+    D_GOODS.MD_ID,
+    D_GOODS.GOODS_NAME
     FROM
     D_CUS RIGHT OUTER JOIN D_SR ON (D_SR.CUS_NUM=D_CUS.CUS_NUM)
     LEFT OUTER JOIN D_GOODS ON (D_GOODS.GOODS_CODE=D_SR.GOODS_CODE)
