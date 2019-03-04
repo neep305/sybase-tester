@@ -9,7 +9,8 @@ router.get('/result', async function(req, res, next) {
 
     const data = await db.getAllSrData(req.params);
 
-    console.log(data);
+    //console.log(data);
+
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json(data);
