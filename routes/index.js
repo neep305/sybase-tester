@@ -7,9 +7,10 @@ router.get('/result', async function(req, res, next) {
   try {
     console.log('req.params', req.params);
 
-    const data = await db.getAllSrData(req.params);
+    // const data = await db.getAllSrData(req.params);
+    const data = await db.getSrType(req.params);
 
-    //console.log(data);
+    console.log(data);
 
     res.status(200).json(data);
   } catch (error) {
